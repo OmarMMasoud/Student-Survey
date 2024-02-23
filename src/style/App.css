@@ -1,0 +1,98 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* nav style*/
+.nav{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-inline: auto ;
+}
+.nav .logo{
+  background-color: #0098D9;
+}
+
+.nav h1{
+  color: #0098D9;
+}
+
+
+/* student card style */
+.survey {
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: 3rem auto;
+}
+.survey button {
+  border: none;
+  color: white;
+  margin: 0 auto 5rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 15px;
+  background-color: #0098D9;
+}
+.studentCard{
+  padding: 0 0 0 0;
+  color: white;
+  width: clamp(350px, 70%, 1500px);
+  margin-inline: auto;
+  background-color: #0098D9;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.studentCard .studentName{
+  display: flex;
+  width: clamp(1rem , 70%, 70%);
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto 0rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: #0098D9;
+  border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+.studentCard .questions{
+  max-width: 70%;
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+ border: 1px solid #0098D9;
+  list-style: none;
+ 
+}
+.studentCard .q{
+  margin: 1rem auto;
+  padding: 1.5rem;
+ border: 1px solid white;
+ border-radius: 60px;
+ font-weight: 500;
+}
+.studentCard .q span{
+font-weight: bold; 
+margin-top: 1rem;
+justify-content: center;
+text-align: center;
+align-items: center;
+display: flex;
+}
+
+.status{
+  background-color: #464343;
+  height: 2rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+}
