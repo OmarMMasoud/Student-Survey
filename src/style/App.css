@@ -70,9 +70,7 @@ margin: 3rem auto;
   list-style: none;
  
 }
-.studentCard .question{
 
-}
 .studentCard .list{
   margin: 1rem auto;
   padding: 1.5rem;
@@ -147,7 +145,21 @@ border-radius: 50px;
   align-items: center;
   justify-content: center;
 }
+.task button{
+  border: none;
+  color: white;
+  margin: 0 auto 5rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 15px;
+  background-color: #0098D9;
+}
 
+.task ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+
+}
 .task ul {
   text-decoration: none;
   list-style: none;
