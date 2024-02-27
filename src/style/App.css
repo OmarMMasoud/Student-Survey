@@ -62,7 +62,7 @@ margin: 3rem auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   
 }
-.studentCard .questions{
+.studentCard .questions-answers{
   max-width: 70%;
   margin: 1rem auto;
   padding: 0.5rem 0;
@@ -70,16 +70,18 @@ margin: 3rem auto;
   list-style: none;
  
 }
-.studentCard .q{
+.studentCard .question{
+
+}
+.studentCard .list{
   margin: 1rem auto;
   padding: 1.5rem;
- border: 1px solid white;
  border-radius: 60px;
  font-weight: 500;
+ border: 1px solid white;
 }
-.studentCard .q span{
+.studentCard span{
 font-weight: bold; 
-margin-top: 1rem;
 justify-content: center;
 text-align: center;
 align-items: center;
@@ -95,4 +97,60 @@ display: flex;
   justify-content: center;
   margin: 0 auto;
   border-radius: 20px 20px 0 0;
+}
+form{
+  background-color: #0098D9;
+  color: white;
+  width: clamp(350px, 70%, 1500px);
+  margin-inline: auto;
+  background-color: #0098D9;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+
+.selectType{
+  display: flex;
+  width: clamp(1rem , 70%, 70%);
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto ;
+  padding: 1rem;
+  background-color: white;
+  color: #0098D9;
+  border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.choices{
+  justify-content: center;
+  gap: 0.2rem;
+  display: flex;
+  margin: 2.2rem auto;
+
+}
+.submit{
+padding: 1rem 2.2rem;
+border: 10px white solid;
+color: white ;
+font-weight: 900;
+background-color: #0098D9;
+border-radius: 50px;
+}
+
+.task {
+  max-width: 70vw;
+  margin: 0 auto ;
+  align-items: center;
+  justify-content: center;
+}
+
+.task ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+
 }

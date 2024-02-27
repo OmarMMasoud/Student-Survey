@@ -1,46 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const SurveyType = ({ questions }) => {
+const SurveyType = () => {
   const navigate = useNavigate()
-  const location = useLocation()
-  const [degree, setDegree] = useState(null)
-  const [filteredQuestions, setFilteredQuestions] = useState(null)
 
-  useEffect(() => {
-    if (degree === 'master') {
-      setFilteredQuestions(questions)
-    } else if (degree === 'bachelor' && questions && questions.length > 0) {
-      setFilteredQuestions(questions.filter(question => question.id > 2))
-    } else{
-      setFilteredQuestions(null)
-     }
-  }, [degree, questions])
-
-
-  const handleDegreeChange = (degree) => {
-    return () => {
-      setDegree(degree)
-
-      if (degree === 'master') {
-        setFilteredQuestions(questions)
-      } else if (degree === 'bachelor') {
-        setFilteredQuestions(questions.filter(question => question.id > 2))
-      } else {
-        setFilteredQuestions(null)
-      }
-
-      navigate('/task', { state: { degree, filteredQuestions } })
-    }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const status = event.target.surveyType.value
+    navigate('/task', { state: { status } })
   }
 
   return (
-    <div className='surveyType'>
-      <h1>Choose your degree:</h1>
-      <button id='master' onClick={handleDegreeChange('master')}>Master</button>
-      <button id='bachelor' onClick={handleDegreeChange('bachelor')}>bachelor</button>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <h2 className='selectType'>Are You A Master Or Bacholar Student  ?</h2>
+      <div className="choices"><label htmlFor="master">Master</label>
+      <input type="radio" id="master" name="surveyType" value="master" />
+       <br />
+      <label htmlFor="bachelor">Bachelor</label>
+      <input type="radio" id="bachelor" name="surveyType" value="bachelor" />
+      </div><br />
+      <button className='submit' type="submit">Next</button>
+    </form>
   )
 }
 
